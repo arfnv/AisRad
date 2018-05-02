@@ -1,0 +1,42 @@
+# Output directories etc
+/lib
+mysqldata
+mysqlmsgs
+obj
+.svn
+svn
+_UpgradeReport_Files
+Win32
+x64
+jit/debug
+jit/release
+jit/Win32
+jit/x64
+/Libraries
+radgui/debug
+radgui/release
+radgui/Win32
+radgui/x64
+radide/debug
+radide/release
+radide/Win32
+radide/x64
+smtbase/Win32
+smtbase/x64
+Tutorial_TestSuite
+
+
+# Linux executables built
+/gearman/worker_ais_gearman
+/shell/aisshell
+
+
+# User settings and user data
+*.ncb
+*.sdf
+*.suo
+*.user
+*.suo.old
+*.opensdf
+*/.vs
+/linux/ais

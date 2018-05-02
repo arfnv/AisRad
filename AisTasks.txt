@@ -1,0 +1,1560 @@
+============
+===AIS TASKS
+============ 
+
+======================
+===BEG CURRENT PROJECT
+======================
+###Bug List (Fix these new bugs and issues with ais.exe)
+===============
+=============== 
+! Fix AIS import from a comma delimited file??   
+	;; Example Test Problems: (using import from external data files)
+	(arc.setOptions fullREGRESSION:)
+	(setq D 2)(setq B 8)(setq T v:)(setq fitness fpct:)(setq G .05)(setq E .0000000001)
+	(setq rql "model(weighted(2,3,c)) where {op(noop,+,-,*,/,abs,square,cube,sqroot) fitness(fpct) island(smart,standard,100,25,0,100,200)}")
+	(arc.run rql fitness D T B import: "Phil_Marketing1" G E "SELECT_TRAIN.DAT" "SELECT_TEST.DAT" "SELECT_OUTPUT.DAT")
+	true
+
+===============
+###New AIS.exe   ==> http://localhost:80/EarnieStartup.html                                                                        
+--- (Add standard OOP and Multitasking to AisRad)
+o Add signals/slots methods in RadObject class (start with QThread, QMutex, QMutexLocker).
+o Add MultiTasking online docs qt classes & methods document (QThread, QMutex, QMutexLocker). 
+o Add code for RadMutexLocker object.
+o Add code for RadMutex object.
+o Add code for RadThread object.
+o Fix code for RadTcpServer object (may need MOC).
+o Fix code for RadTcpSocketo Fix code for RadTcpServer object (may need MOC).
+---
+D Chg table to be a defclass.
+D Fix Test_TableAgt.sl in Tutorial_TestSuite to work AFTER all defclass changes everywhere.
+D Fix JavaScript to send msgs for table code (works with both old and new tables).
+D Fix Tutorial_TestSuite to work properly with the new changes.
+D Fix fileClose function all: argument doesn't work properly, also symbol arguments don't work properly.
+D Fix ideMgr "find" has stopped working??
+D Drop Document_Lambda_Contexts AND document still relevant lambda context variables in Document_Analytic_Information_Server.
+D Chg console command line to a QComboBox.
+D Fix defclone and online docs to be a better defclass alternative.
+o Add info on _ais Structure, creation of .exe files, startup protocol line (i.e. #heap) in Document_Analytic_Information_Server. 
+? Add online docs qt classes & methods document.
+  o Add Essay_Qt_Class_RadCheckBox document --> resume with new
+  o Add Essay_Qt_Class_RadComboBox document --> resume with new
+  o Add Essay_Qt_Class_RadDialog document --> resume with new
+  o Add Essay_Qt_Class_RadHBoxLayout document --> resume with new
+  o Add Essay_Qt_Class_RadLabel document --> resume with new
+  o Add Essay_Qt_Class_RadObject document --> resume with new
+  o Add Essay_Qt_Class_RadPushButton document --> resume with new
+  o Add Essay_Qt_Class_RadTabWidget document --> resume with new
+  o Add Essay_Qt_Class_RadTcpServer document --> resume with new
+  o Add Essay_Qt_Class_RadTcpSocket document --> resume with new
+  o Add Essay_Qt_Class_RadVBoxLayout document --> resume with new
+  o Add Essay_Qt_Class_RadWidget document --> resume with new
+
+true 
+true
+ 
+
+--- (Update Tutorial_OnlineDocs)
+o Add Document_Lambda_QT to provide QT Lisp-aware classes help.
+o Fix aisRefGuide so Function pages show relevant examples.
+--- (Convert to later MS VisualStudio, MySQL, & QT)
+o Cnv to later version of MS VisualStudio
+o Cnv to later version of mySQL
+o Cnv to later version of QT
+o Fix RadTextEdit class NOT to leak memory.
+o Fix RadComboBox class NOT to leak memory.
+--- (Develop a New Web HTML Display window for ais.exe)
+o Study adding sockets/slots to RAD Objects without using MOC - subclassing the signals methods for specific classes.
+o Study QT module overviews: QTWebKit, QWeb, QFtp, etc.
+o Add SOAP support to ais.exe & tcpSvr.s.
+--- (Build a new FARM tutorial - multiple asynchronous background processes)
+o Add RadProcess class - prepare to create batch and Farm Tutorials.
+o Add scheduling of multiple background processes QProcess.
+o Cnv farm Library to run in RadIde.
+o Try design of Map Reduce & HADOOP architecture for multiple servers.
+o Study NodeJS Express Jade for AIS interfaces plus new concept of stack, apache, erlang etc.
+  o Note: apache dies at about 4000 sessions, but erlang can do up to 10000 no problem.
+--- (Build a New Tutorial-Editor - radEdit.exe,)
+o Add Editor tutorial for editing multiple Lisp files - editMgr.
+--- (DeepGreen|Earnie local What-If-Viewing)
+o Add RadTableView and RadListView classes (maybe model-view-controller classes).
+o Cnv DeepGreen to ais.exe - both the weekly FundViewer, WeeklyTraining, SQLViewer windows using Table widgets.
+--- (Build a New WebIde-Tutorial using RadIde)
+o Add RadTask class - prepare to create multiple asynchronous contexts.
+o Add scheduling of tasks periodically.
+o Add RadSession classes - prepare to run multiple in-process contexts - rewrite ASessionMgr & other WebIde classes, mostly in Lisp, so we have an AIS written in RadIde.
+o Add FSmartbase_ContextOpen note: new Lisp arguments ==> (setq contextObj (contextOpen name memorySize stackSize objHdrSize submitScript startupFileName subscribeSW)) 
+o Add FSmartbase_ContextSubmit
+
+
+
+###Smartbase Engine
+ 
+--- (Design a New Faster Smartbase Lisp Lambdas and Functions)
+o Fix Lambda to improve call times - for instance if Vars: were an attributed Vector then intialization could be a C memcpy() - if pvars: cvars: & svars: were always present then initialization could be just a pointer indirection.
+o Make Rv, Tv, and Av attributed Vectors so that initialization can be a fast memcpy.
+o Add a Lambda attribute which eliminates escape calls on function invocation.
+--- (Build multiple Context threads with multitasking)
+o Try integrating multi-tasking with each context object within the Smartbase Engine.
+o Try articulated evaluation/reference between one context and another in-process. 
+ 
+--- (Unsigned Integer Support)
+? Add unsigned Integer to Lisp
+  D Add UInteger support to VMADD VM instruction 
+  D Add UInteger support to VMADDI VM instruction 
+  D Add UInteger support to VMADDN VM instruction 
+  D Add UInteger support to VMAND VM instruction 
+  D Add UInteger support to VMDIV VM instruction 
+  D Add UInteger support to VMDIVI VM instruction 
+  D Add UInteger support to VMDIVN VM instruction 
+  D Add UInteger support to VMDIVR VM instruction 
+  D Add UInteger support to VMDIVRI VM instruction 
+  D Add UInteger support to VMJUMPLE VM instruction 
+  D Add UInteger support to VMJUMPLT VM instruction 
+  D Add UInteger support to VMJUMPEQ VM instruction 
+  D Add UInteger support to VMJUMPNE VM instruction 
+  D Add UInteger support to VMJUMPGE VM instruction 
+  D Add UInteger support to VMJUMPGT VM instruction 
+  D Add UInteger support to VMMOVE VM instruction 
+  D Add UInteger support to VMMOVEI VM instruction 
+  D Add UInteger support to VMMOVEN VM instruction 
+  D Add UInteger support to VMMUL VM instruction 
+  D Add UInteger support to VMMULI VM instruction 
+  D Add UInteger support to VMMULN VM instruction 
+  D Add UInteger support to VMOR VM instruction 
+  D Add UInteger support to VMSHL VM instruction 
+  D Add UInteger support to VMSHR VM instruction 
+  D Add UInteger support to VMSUB VM instruction 
+  D Add UInteger support to VMSUBI VM instruction 
+  D Add UInteger support to VMSUBN VM instruction 
+  D Add UInteger support to VMXOR VM instruction 
+
+  D Add VMMOVEU VM instruction
+  D Add VMADDU VM instruction
+  D Add VMDIVU VM instruction
+  D Add VMDIVRU VM instruction
+  D Add VMMULU VM instruction
+  D Add VMSUBU VM instruction 
+  
+  D Add VMUADD VM instruction   
+  D Add VMUDIV VM instruction
+  D Add VMUDIVR VM instruction
+  D Add VMUMUL VM instruction
+  D Add VMUSUB VM instruction 
+  
+  D Add vmnatLoadUInteger VM instruction
+  D Add vmregSaveUInteger VM instruction
+
+  D Add vmnatJmpLEUInteger VM instruction
+  D Add vmnatJmpLTUInteger VM instruction
+  D Add vmnatJmpEQUInteger VM instruction
+  D Add vmnatJmpNEUInteger VM instruction
+  D Add vmnatJmpGTUInteger VM instruction
+  D Add vmnatJmpGEUInteger VM instruction
+    
+  ? Add vmregJmpLEUImmediate VM instruction (jbe)
+  ? Add vmregJmpLTUImmediate VM instruction (jb)
+  D Add vmregJmpEQUImmediate VM instruction
+  D Add vmregJmpNEUImmediate VM instruction
+  ? Add vmregJmpGTUImmediate VM instruction (ja)
+  ? Add vmregJmpGEUImmediate VM instruction (jae)
+  
+  D Add vmregJmpLEUInteger VM instruction
+  D Add vmregJmpLTUInteger VM instruction
+  D Add vmregJmpEQUInteger VM instruction
+  D Add vmregJmpNEUInteger VM instruction
+  D Add vmregJmpGTUInteger VM instruction
+  D Add vmregJmpGEUInteger VM instruction
+    
+  o Add UInteger support to FVmScript2_DebugManager C function
+  o Add UInteger support to FOptimize_OptimizePcode C function
+  o Add UInteger support to FOptimize_OptimizeCalls C function
+  
+  o Add UInteger test suite
+  o Add UInteger online documentation
+  o Study best approach to adding optimized UInteger vmnat vmreg casting instructions
+
+---TESTING SCRIPTS:
+
+(loop for n from 0 until 100000 do (setq radWidgetPtr (qt new: RadWidget: 0 0))(setq radWidgetPtr (qt delete: radWidgetPtr)))
+
+(loop for n from 0 until 10000 do (setq radTabWidgetPtr (qt new: RadTabWidget: 0 0))(setq radTabWidgetPtr (qt delete: radTabWidgetPtr)))
+
+(loop for n from 0 until 10000 do (setq radTextEditPtr (qt new: RadTextEdit:))(setq radTextEditPtr (qt delete: radTextEditPtr))) ;; Currently leaks memory
+
+(loop for n from 0 until 10000 do (setq radLineEditPtr (qt new: RadLineEdit:))(setq radLineEditPtr (qt delete: radLineEditPtr)))
+
+(loop for n from 0 until 10000 do (setq radLabelPtr (qt new: RadLabel: "Hello"))(setq radLabelPtr (qt delete: radLabelPtr)))
+
+(loop for n from 0 until 10000 do (setq radPushButtonPtr (qt new: RadPushButton: "Hello" (lambda() "Pushed")))(setq radPushButtonPtr (qt delete: radPushButtonPtr)))
+
+(loop for n from 0 until 10000 do (setq radVBoxLayoutPtr (qt new: RadVBoxLayout:))(setq radVBoxLayoutPtr (qt delete: radVBoxLayoutPtr)))
+
+(loop for n from 0 until 10000 do (setq radHBoxLayoutPtr (qt new: RadHBoxLayout:))(setq radHBoxLayoutPtr (qt delete: radHBoxLayoutPtr)))
+
+(loop for n from 0 until 10000 do (setq radDialogPtr (qt new: RadDialog: "x" #void))(setq radDialogPtr (qt delete: radDialogPtr)))
+
+(loop for n from 0 until 10000 do (setq radCheckBoxPtr (qt new: RadCheckBox: "x" #void))(setq radCheckBoxPtr (qt delete: radCheckBoxPtr)))
+
+(loop for n from 0 until 10000 do (setq radComboBoxPtr (qt new: RadComboBox: #void))(setq radComboBoxPtr (qt delete: radComboBoxPtr)))
+
+
+(setq radWidgetPtr (qt new: RadWidget: 0 0))
+(setq radTabWidgetPtr (qt new: RadTabWidget: 0 0))
+(setq n (qt mainWindow: addTab: radTabWidgetPtr "Hi There" #void))
+(setq n (qt radTabWidgetPtr addTab: radWidgetPtr "My Tab" #void)) 
+
+(setq radTEditPtr (qt new: RadTextEdit:))
+(setq radTabWidgetPtr (qt new: RadTabWidget: 0 0))
+(setq n (qt mainWindow: addTab: radTabWidgetPtr "Hi There" #void))
+(setq n (qt radTabWidgetPtr addTab: radTEditPtr "My Tab" #void)) 
+
+;; Test the Properties of the RadTextEdit class
+(setq RadTextEditPtr (qt new: RadTextEdit:))
+(setq n (qt mainWindow: addTab: RadTextEditPtr "RadTextEdit" #void))
+true
+(qt RadTextEditPtr setReadOnly: true)
+(qt RadTextEditPtr setHtmlText: "Now is the tine <b>for</b> all good men")
+(qt RadTextEditPtr getHtmlText:)
+true
+
+;; Test the Properties of the RadTextEdit class
+(setq RadTextEditPtr (qt new: RadTextEdit:))
+(setq n (qt mainWindow: addTab: RadTextEditPtr "RadTextEdit" #void))
+true
+
+;; Test the Properties of the RadLineEdit class
+(setq RadLineEditPtr (qt new: RadLineEdit:))
+(setq n (qt mainWindow: addTab: RadLineEditPtr "RadLineEdit" #void))
+(qt RadLineEditPtr getText:)
+(qt RadLineEditPtr setText: "Testing")
+true
+
+;; Test the Properties of the RadLabel class
+(setq RadLabelPtr (qt new: RadLabel: (append "Testing to see if <b>Rich</b> text works " _eol 
+											 "<ul> <li>AIS <a href=" _ais.AisHelpURL ">" _ais.AisHelpURL "</a></li>" _eol
+											 "<li>QT <a href=" _ais.QtHelpURL ">" _ais.QtHelpURL "</a></li>" _eol
+											 "<li>MySQL <a href=" _ais.MySQLHelpURL ">" _ais.MySQLHelpURL "</a></li>" _eol
+											 "</ul>")))
+(setq n (qt mainWindow: addTab: RadLabelPtr "RadLabel" #void))
+(qt RadLabelPtr getText:)
+(qt RadLabelPtr setText: "Testing")
+true
+
+;; Test the Properties of the RadPushButton class
+(setq RadPushButtonPtr (qt new: RadPushButton: (append "Testing to see if <b>Rich</b> text works " _eol 
+											           "<ul> <li>AIS <a href=" _ais.AisHelpURL ">" _ais.AisHelpURL "</a></li>" _eol
+											           "<li>QT <a href=" _ais.QtHelpURL ">" _ais.QtHelpURL "</a></li>" _eol
+											           "<li>MySQL <a href=" _ais.MySQLHelpURL ">" _ais.MySQLHelpURL "</a></li>" _eol
+											           "</ul>") (lambda() "Pushed")))
+(setq n (qt mainWindow: addTab: RadPushButtonPtr "RadPushButton" #void))
+(qt RadPushButtonPtr getText:)
+(qt RadPushButtonPtr setText: "Testing")
+true
+
+(setq radDialogPtr (qt new: RadDialog: "Testing" #void))
+(setq result (qt radDialogPtr exec:))
+
+(setq fileName (ideMgr.dialogGetText "Testing" "..."))
+
+--- Code saved from old FVmScript2_DebuggerManager
+
+======================
+===END CURRENT PROJECT
+======================
+
+;; =====================================
+;; BEG fundBacktestingMgr testing script
+;; =====================================
+(stockWeekly.createHistoriesFromAnalysts)
+true 
+(setq cursor (stockWeekly.weeklyCursor 1093))
+(cursor.checkin)
+true
+(setq foo (fundBacktestMgr._checkout ActiveTradersBacktesting: "AATest"))true
+(setq foo (fundBacktestMgr._checkout ActiveTradersBacktesting: "Trader XIV Channel_BacktestingHistory"))true
+(setq foo (fundBacktestMgr._checkout FundTradersBacktesting: "Trader Panic Elite Top Five_BacktestingHistory"))true
+(setq foo (fundBacktestMgr._makeDefaultRecord))
+true
+(fundBacktestMgr._checkin ActiveTradersBacktesting: "AATest" foo)true
+(fundBacktestMgr._checkin FundTraders: "AATest" foo)true
+true
+(fundBacktestMgr.getProjectNames)
+(fundBacktestMgr.getTraderNames FundTraders:)
+(fundBacktestMgr.getTraderAssociateNames FundTraders: "Trader CEP Growth Top TwentyFive_BacktestingHistory")
+true
+(fundBacktestMgr.run #Jan,3,2014  FundTraders: "AATest")
+(setq cursor (fundBacktestMgr.runLatestTable WorkArea1: "AATest"))        
+(fundBacktestMgr.traderManager.testRun WorkArea1: "AAPanic Elite Top Five (002)")
+(fundBacktestMgr.traderManager.testRun WorkArea1: "AATrader")
+true
+(fundBacktestMgr.traderManager.openProject WorkArea1:)       
+(fundBacktestMgr.traderManager.addProjectFilter AATrader: "top Vars.FEP 25;")       
+(fundBacktestMgr.traderManager.dropProjectFilter AATrader:)       
+(fundBacktestMgr.traderManager.getFilterSource AATrader:)       
+(fundBacktestMgr.traderManager.clearProject)       
+(fundBacktestMgr.traderManager.copyFilterLambda AATrader: NewAATrader:)       
+(fundBacktestMgr.traderManager.getFilterLambda AATrader:)       
+(fundBacktestMgr.traderManager.getFilterDescription AATrader:)       
+(fundBacktestMgr.traderManager.getFilterHistory AATrader:)       
+(fundBacktestMgr.traderManager.getFilterHoldings AATrader:)       
+(fundBacktestMgr.traderManager.getFilterMemoPad AATrader:)       
+(fundBacktestMgr.traderManager.getFilterPerformance AATrader:)       
+(fundBacktestMgr.traderManager.getFilterRawPerformance AATrader:)       
+(fundBacktestMgr.traderManager.getFilterPortfolio AATrader:)       
+(fundBacktestMgr.traderManager.getFilterScores AATrader:)       
+(fundBacktestMgr.traderManager.getFilterStocks AATrader:)       
+(fundBacktestMgr.traderManager.getFilterTables AATrader:)       
+(fundBacktestMgr.traderManager.getFilterTesting AATrader:)       
+(fundBacktestMgr.traderManager.resetBackAYear WorkArea1: #Jan,1,2005)       
+(fundBacktestMgr.traderManager.updateProjectTables WorkArea1:)       
+;; =====================================
+;; END fundBacktestingMgr testing script
+;; =====================================
+
+all Vars.TDVRank>=40;all FinancialStrength>=40;all Vars.RSRank>=40;all WeeksClose>=5;
+all min(Trailing12MoEPS,Vars.Estimated12MoEPS,Vars.Forward12MoEPS,Vars.Future12MoEPS,Vars.Projected12MoEPS)>0;
+top Vars.RSRank*Vars.FEP*Vars.VPM 25;
+
+
+#if 0
+<head>
+<title>DeepGreen Weekly Fund Viewer</title>
+
+<script language="JavaScript">
+
+var gEventBlockCount = 0;		// Counter to block stacked events. See messageBar function docs below.
+var gTablesMenuOptionChoice = "Yrly";	// Tables Menu Option Choice.
+
+// -------------------------------------------------------------------------------
+// Summary:  Decode all XML special characters in the specified string.
+// Args:     iMsg:         The string whose XML special characters are to be decoded.
+// Return:   result:       The string with its XML special characters decoded.
+// -------------------------------------------------------------------------------
+function decodeXml(iMsg) {
+    // Convert predefined entities, &lt;, &amp;, &gt;, &apos;, &quot;
+    var aRet = iMsg.replace(/&quot;/g, '"');
+    aRet = aRet.replace(/&lt;/g, "<");
+    aRet = aRet.replace(/&gt;/g, ">");
+    aRet = aRet.replace(/&apos;/g, "'");	
+    aRet = aRet.replace(/&amp;/g, "&"); // Do & last!
+    return aRet;
+}
+
+// -------------------------------------------------------------------------------
+// Summary:  Encodes the <, &, and " special XML characters in the specified string.
+// Args:     iMsg:         The string whose <, &, and " special XML characters are to be decoded.
+// Return:   result:       The string with its <, &, and " XML special characters decoded.
+// Note:     Encode all strings w/ special chars before including them in an XML doc.
+// -------------------------------------------------------------------------------
+function encodeXml(iMsg) {	
+    var aRet = iMsg.replace(/&/g, "&amp;"); // Do & first!
+    aRet = aRet.replace(/</g, "&lt;");
+    aRet = aRet.replace(/>/g, "&gt;");
+    aRet = aRet.replace("'", "&apos;");
+    aRet = aRet.replace(/"/g, "&quot;");
+    return aRet;
+}
+
+// -------------------------------------------------------------------------------
+// Summary:  Display any errors from the Smartbase engine.
+// Args:     result:       The result of and expression to be evaluated.
+// Return:   answer:       True if result was not en error.
+// -------------------------------------------------------------------------------
+function NoError(result) {
+    var answer;
+    // If result is an error, then display an error message.
+    if ((typeof(result) == "string") && (result.length > 2)) 
+    {
+        if ((result.charAt(0) == "!") && (result.charAt(result.length-1) == "!")) 
+        {
+            confirm(result);
+            return false;
+        }
+    }
+    // Always return true if result was not an error.
+    return true;
+}
+
+
+// -------------------------------------------------------------------------------
+// Summary:  Evaluate the command expression in the SmartBase engine.
+// Args:     command:      The source expression to be evaluated.
+// Return:   result:       The result of evaluating the expression.
+// -------------------------------------------------------------------------------
+function Evals(command) {
+    var cmd = "xml=<ais><lisp>" + encodeXml(command) + '</lisp></ais>';
+    var buffer = "";
+    var result = "";
+
+    if (window.XMLHttpRequest) { // branch for native XMLHttpRequest object
+        req = new XMLHttpRequest();
+        req.open("POST", "amp.dll", false); // load sync!
+        req.send(cmd);
+    } else if (window.ActiveXObject) { // branch for IE/Windows ActiveX version
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+        if (req) {
+            req.open("POST", "amp.dll", false); // load sync!
+            req.send(cmd);
+        }
+    }
+
+    if(req.status == 200) {
+	var buffer = req.responseText;
+    } else {
+	alert("Evals failed for:"  + command);  
+    }
+
+    // Extract just the result information from the returned string
+    buffer = buffer.slice(buffer.indexOf("<result>") + 8,buffer.lastIndexOf("</result>"));
+    result = decodeXml(buffer);
+
+    return (result);
+}
+
+// ------------------------------------------------------
+// getEvent gets the current event object in a cross platform way. 
+// Arguments:
+// 		id	-- Element ID of the element on which the event fired.
+//		evt -- Event passed to the event handler for W3C browsers.
+// In IE, the current event is an attribute of the window in which the event occurred. 
+// In W3C browsers, the event is passed to the event handler as an argument. getEvent 
+// is necessary to ensure that IE returns event object from the window object in which 
+// the element lives. 
+// Imagine the situation that arises when multiple IFRAME elements are used on a page and
+// an event fires. In IE, each IFRAME has its own window object and we must
+// find the element for which the event has fired and then figure out what window
+// it belongs to so we can get a reference to the windows event object. Pretty brutal
+// eh? Anyway, a W3C browser is simple. We don't have to jump through these silly hoops.
+// Consider the sample code below for an example of how to use getEvent:
+// function myElementOnClick(evt) {
+//		evt = getEvent("myElement", evt);
+//  	// ....
+// 		return true;
+//		}
+//
+function getEvent(id, evt) {
+    var element = document.getElementById(id);
+    var win = (document.contentWindow == "undefined") ? element : element.contentWindow;
+    evt = (evt) ? evt : win.event;
+    return evt;	
+}
+
+// -------------------------------------------------------------------------------
+// Page specific event handlers and funtions
+// -------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------
+// Summary: Show the current message
+// Note that this function will have no effect on the page content until the script
+// that calls it returns. This is because the Browsers don't refresh a page until
+// a script completes its processing. To use messages, to indicate progress, in your
+// page you must split the application action into two functions. The first function sets up
+// up the page the way it should look while the procesing occurs and then uses
+// setTimout(..) to run the second function. Call messageBar("..I'm busy..") in the first
+// part and messageBar("") in the second part. 
+//
+// Note: Breaking the processing into two parts also means that you need to have an
+// application level "block" on other events being executed in between the two parts
+// of the processing. The global variable gEventBlockCount is used to accomplish this.
+// Consider the following event handler template:
+//
+// var gEventBlockCount = 0;
+// function myElemementOnClick() {
+//  	if (gEventBlockCount > 0) {
+//			alert("!Script Running. Please Wait!");
+//			return true;
+//			}
+//		gEventBlockCount++; // Block other events while this one is processed
+//		messageBar("I'm thinking");
+//		setTimeout("myElementOnClick2()",0); // allow page to refresh
+//		return true;
+//		}
+//
+// function myEventOnClick2() { // second half of event handler
+//		// Insert the actual heavy lifting call here. Like a call to the server for instance.
+//		messageBar(""); // Clear the message bar back to the default value
+//		gEventBlockCount--;
+//		return true;
+//		}
+//
+// Normally, you should only split event handlers into two pieces. It is unwise to split generalized 
+// functions that might be called at different times because deeply nested gEventBlockCount debugging
+// can be difficult.
+//
+function messageBar(msg) {
+    document.getElementById("MessageBar").innerHTML = (msg == "") ? "DeepGreen Weekly Training Window Viewer" : "<font color='red'>..." + msg + "...</font>";
+    return true;
+}
+
+//----------------------------------------------------------------------------------
+// ProjectNameList iframe support functions and state variables
+// The ProjectNameList iframe contains a single table. Each row has a single column
+// that contains the name of a projec.
+// The following functions allow the table to act as a simple select list. Since this
+// is an iframe, the list can rendered in any way you want.
+// 
+var gCurrentProject = null; // Contains the name of the currently selected project
+
+// Clear any selected project and all other data from page related to the project
+function ClearSelectedProject() {
+    var element = document.getElementById("ProjectNameList");
+    var doc = (document.contentWindow == "undefined") ? element.document : element.contentWindow.document;
+    var rows = doc.getElementById("projectlist").rows;
+    for(var i=0; i<rows.length; ++i) 
+    {	
+        rows[i].cells[0].style.color = "black";
+    }
+    gCurrentProject = null;
+    TraderNameListDoClear(); // The trader list is specific to the current project so clear it.
+}
+
+function ProjectNameItemOnMouseOver(evt) {
+    var elem;
+    evt = getEvent("ProjectNameList", evt);
+    if (elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null))
+    {	
+        elem.style.fontWeight = "bold";	
+    }
+    return false; 
+}
+
+function ProjectNameItemOnMouseOut(evt) {
+    var elem;
+    evt = getEvent("ProjectNameList", evt);
+    if (elem = (evt.target) ? evt.target : ((evt.fromElement) ? evt.fromElement : null))
+    {	
+        elem.style.fontWeight = "normal";	
+    }
+    return false;
+}
+
+// When a new project is selected by a click event in the ProjectNameList iframe, this event handler is called.
+// Note that the handler is split into two pieces to allow a refresh of the messagebar while the new project
+// information is retrieved. Note: There is no cross platform way of doing this without spliting the handler
+// into two pieces.
+function ProjectNameItemOnClick(evt) {
+    var elem;		
+    if (gEventBlockCount > 0) 
+    {	
+        alert("Server Busy - please wait " + gEventBlockCount)
+        return false;
+    }
+    gEventBlockCount++; // Prevent other events firing until this one has been processed
+    evt = getEvent("ProjectNameList", evt);
+    if (elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null))
+    {	
+        ClearSelectedProject(); // Clear the old selection if any
+        // Set the current element as the current selection
+        elem.style.color = "red";
+        gCurrentProject = elem.firstChild.nodeValue;
+        messageBar("<font color=red>...Loading traders list...</font>");
+        setTimeout("ProjectNameItemOnClick2()",0); // Allow refresh of page
+        return false;
+    }
+    // We didn't call ProjectNameItemOnClick2 so decrement gEventBlockCount here before we leave
+    gEventBlockCount--;
+    return false;
+}
+	
+function ProjectNameItemOnClick2(evt) { // second half of event handler
+    var result = ProjectNameListDoSelect(gCurrentProject);
+    if (!result) 
+    {	
+        gCurrentProject = null;
+        elem.style.color = "black";
+    }
+    messageBar("");
+    gEventBlockCount--;
+}
+
+// This function is called once by the startup function. It gets the current list of projects
+// from the server and builds a list of these in the ProjectNameList iframe. This list is a 
+// table having an id of "projectlist".
+function ProjectNameListDoInit() {
+    // Get the all table and view names in the StockWeeklyfundBacktestMgr.
+    var nameList = Evals("(libraryMgr.delimitedString (fundBacktestMgr.traderManager.getProjectNames) #\\, #\\,)");
+    nameList = nameList.split(",");
+    // Get the document element reference in the projectnamelist iframe
+    var element = document.getElementById("ProjectNameList");
+    var doc = (document.contentWindow == "undefined") ? element.document : element.contentWindow.document;
+    // Build the html page text for the projectlist iframe element
+    var docText = "<html><body><table id='projectlist' bgcolor='#99CCCC' rules='all'><tr><td>...Close All...</td></tr>";
+    for(var i=0; i<nameList.length; i++)
+    {	
+        docText += "<tr><td>" + nameList[i] + "</td></tr>";
+    }
+    docText += "</table></body></html>";
+    // Write the html page text into the document 		
+    doc.clear();
+    doc.open();
+    doc.write(docText);
+    doc.close();
+    // Assign event handlers to each TD element in table of projectnames
+    // Note: It is better to do this here that by assignment in the element tags. First because
+    // we don't have as much text processing. Second, these events don't become active until the 
+    // full text of the document has been written.
+    var rows = doc.getElementById("projectlist").rows;
+    for(i=0; i<rows.length; i++)
+    {	
+        rows[i].cells[0].onmouseover = ProjectNameItemOnMouseOver;
+        rows[i].cells[0].onclick = ProjectNameItemOnClick;
+        rows[i].cells[0].onmouseout = ProjectNameItemOnMouseOut;
+    }
+    TraderNameListDoClear();
+    return true;
+}
+
+function ProjectNameListDoSelect(projectName) {
+    if (projectName == "...Close All...") 
+    {	// Close and Save the selected project.
+        var result = Evals("(fundBacktestMgr.traderManager.saveProject clear:)");
+        if (NoError(result) == false) 
+        return true;
+    } else 
+    {	// Open the selected project.
+        var result = Evals("(fundBacktestMgr.traderManager.openProject " + projectName + ":)");
+        if (NoError(result) == false) 
+        return true; 
+        TraderNameListDoInit(); // retrieve the traders for the project
+    }
+    return true;
+}
+
+// Clear all data from the page starting at the project name list. We clear all data
+// because ProjectNameListDoClear calls TraderNameListDoClear which then calls
+// TraderHistoryDoClear etc...
+function ProjectNameListDoClear() {
+    // Get the document element reference in the projectnamelist iframe
+    var element = document.getElementById("ProjectNameList");
+    var doc = (document.contentWindow == "undefined") ? element.document : element.contentWindow.document;
+    // Build the html page text for the tradernamelist iframe element
+    var docText = "<html><body><table id='projectlist' bgcolor='#99CCCC' rules='all'><tr><td></td></tr></table></body></html>";
+    // Write the html page text into the document 		
+    doc.clear();
+    doc.open();
+    doc.write(docText);
+    doc.close();
+    // Nost start the cascade of calls that clear the rest of the page data
+    TraderNameListDoClear();
+    return true;
+}
+
+
+// TraderNameList iframe element support functions and state variables
+// The TraderNameList iframe contains a single table. Each row has a single column
+// that contains the name of a trader.
+// The following functions allow the table to act as a simple select list. Since this
+// is an iframe, the list can rendered in any way you want.
+// 
+var gTraderNameItemBusy = false; // controls click event firing
+var gCurrentTrader = null; // Contains the name fo the currently selected trader
+
+function TraderNameItemOnMouseOver(evt) {
+    var elem;
+    evt = getEvent("TraderNameList", evt);
+    if (elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null))
+    {	
+        elem.style.fontWeight = "bold";	
+    }
+    return true;
+}
+
+function TraderNameItemOnMouseOut(evt) {
+    var elem;
+    evt = getEvent("TraderNameList", evt);
+    if (elem = (evt.target) ? evt.target : ((evt.fromElement) ? evt.fromElement : null))
+    {	
+        elem.style.fontWeight = "normal";	
+    }
+    return true;
+}
+
+// The TraderNameItemOnClick event handler is fired when the user clicks on a trader name
+// in the TraderNameList iframe. The iframe contains a table with an id of "traderlist".
+// The table contains the names of all of the traders for the gCurrentProject. The 
+// TradernameItemOnClick event is split into two parts to allow the page to refresh while
+// the trader information is retreived from the server.
+function TraderNameItemOnClick(evt) {
+    var elem;
+    evt = getEvent("TraderNameList", evt);
+    if (gEventBlockCount > 0) 
+    {   
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    gEventBlockCount++;
+    if (elem = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null))
+    {	// Clear the old selection if any
+        gTraderNameItemBusy = true; // prevent a second firing of event while processing this one
+        var table = elem.parentNode.parentNode;
+        var rows = table.rows;
+        for(var i=0; i<rows.length; ++i) 
+        {	
+            rows[i].cells[0].style.color = "black";
+        }
+        // Set the current element as the current selection
+        elem.style.color = "red";
+        gCurrentTrader = elem.firstChild.nodeValue;
+        messageBar("<font color=red>...Loading Trader Information...</font>");
+        TraderHistoryDoClear(); // Clear the current displayed history report for the trader
+        setTimeout("TraderNameItemOnClick2()",0); // allow page to refresh
+        return true;
+    }
+    gEventBlockCount--;
+    return true;
+}
+
+function TraderNameItemOnClick2() { // Second half of the event handler for trader selection
+    if (!TraderNameListDoSelect())
+    {	
+        gCurrentTrader = null;
+        elem.style.color = "black";
+        TraderHistoryDoClear();
+        TraderSourceDoClear();
+        alert("Trader Report was unsuccessful!");
+    }
+    gEventBlockCount--;
+    messageBar("");
+    return true;
+}
+
+function TraderNameListDoClear() {
+    // Get the document element reference in the tradernamelist iframe
+    var element = document.getElementById("TraderNameList");
+    var doc = (document.contentWindow == "undefined") ? element.document : element.contentWindow.document;
+    // Build the html page text for the tradernamelist iframe element
+    var docText = "<html><body><table id='traderlist' bgcolor='#99CCCC' rules='all'><tr><td></td></tr></table></body></html>";
+    // Write the html page text into the document 		
+    doc.clear();
+    doc.open();
+    doc.write(docText);
+    doc.close();
+    // Now clear the other data from the page
+    TraderHistoryDoClear();
+    TraderSourceDoClear();	
+    return true;
+}	
+
+
+function TraderNameListDoInit() { // load trader names for current project
+    // Display the trader names for the newly opened project.
+    var NameMenuElem = document.getElementById("SortNameMenu")
+    var sortOrder = NameMenuElem.options[NameMenuElem.selectedIndex].text;
+    if (sortOrder == "Name")
+    { 
+        var command = "(libraryMgr.delimitedString (fundBacktestMgr.traderManager.getFilterNames up: (symbol (trim {" + sortOrder + "}))) #\\^ #\\^)";
+    }
+    else
+    { 
+        var command = "(libraryMgr.delimitedString (fundBacktestMgr.traderManager.getFilterNames down: (symbol (trim {" + sortOrder + "}))) #\\^ #\\^)";
+    }
+    var nameList = Evals(command);
+    if (NoError(nameList) == false) return false; 
+    nameList = nameList.split("^");
+    // Get the document element reference in the projectnamelist iframe
+    var element = document.getElementById("TraderNameList");
+    var doc = (document.contentWindow == "undefined") ? element.document : element.contentWindow.document;
+    // Build the html page text for the tradernamelist iframe element
+    var docText = "<html><body><table id='traderlist' bgcolor='#99CCCC' rules='all'>";
+    for(var i=0; i<nameList.length; i++)
+    {	
+        docText += "<tr><td>" + nameList[i] + "</td></tr>";
+    }
+    docText += "</table></body></html>";
+    // Write the html page text into the document 		
+    doc.clear();
+    doc.open();
+    doc.write(docText);
+    doc.close();
+    // Assign event handlers to each TD element in table of tradernames
+    // Note: It is better to do this here that by assignment in the element tags. First because
+    // we don't have as much text processing. Second, these events don't become active until the 
+    // full text of the document has been written.
+    var rows = doc.getElementById("traderlist").rows;
+    for(var i=0; i<rows.length; i++)
+    {	
+        rows[i].cells[0].onmouseover = TraderNameItemOnMouseOver;
+        rows[i].cells[0].onclick =     TraderNameItemOnClick;
+        rows[i].cells[0].onmouseout =  TraderNameItemOnMouseOut;
+    }
+    return true;
+}
+
+function TraderNameListDoSelect() { // Call DeepGreen to generate trader report
+    // Show the trader report and source code for the selected trader
+    return (TraderHistoryDoInit() && TraderSourceDoInit());
+}
+
+//---------------------------------------------------------------------
+// ReportMenu Select Element support functions.
+function ReportMenuOnChange() { 
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    gEventBlockCount++;
+    TraderHistoryDoClear();
+    messageBar("<font color=red>...Getting New Report - please wait...</font>");
+    setTimeout("ReportMenuOnChange2()",0);
+    return true;
+}
+
+function ReportMenuOnChange2() { // second half of event handler
+    TraderHistoryDoInit();
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+}
+	
+//---------------------------------------------------------------------
+// SortName Select Element support functions.
+function SortNameMenuOnChange() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Getting Project Traders List - please wait...</font>");
+    TraderNameListDoClear();
+    setTimeout("SortNameMenuOnChange2()",0); // all page to refresh
+    return true;
+}
+	
+function SortNameMenuOnChange2() { // second half of event handler
+    TraderNameListDoInit();
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+
+}
+
+//---------------------------------------------------------------------
+// TablesMenu Select Element support functions
+function TablesMenuOnChange() {
+    if (gEventBlockCount > 0)
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    messageBar("<font color=red>...Please Wait...</font>");
+    gEventBlockCount++;
+    setTimeout("TablesMenuOnChange2()",0); // allow page to refresh	
+}
+	
+function TablesMenuOnChange2() { // second have of Tables MenuOnChange event handler
+    // Set the tables option of the current trader project.
+    // Get the current report option
+    var elem = document.getElementById("TablesMenu");
+    var optionChoice = elem.options[elem.selectedIndex].text;
+    gTablesMenuOptionChoice = Evals("(trim {" + optionChoice + "})");
+    var result = Evals("(setq fundBacktestMgr.tablesOption (trim {" + optionChoice + "}))");
+    if (!NoError(result)) 
+    {
+        // Error processing goes here if any
+    }	
+    gEventBlockCount--;
+    messageBar("");
+    return true;
+}
+
+// -------------------------------------------------------------------------------
+// TestRun Button event handler. This event handler is split into two parts to allow
+// the page content to refresh while the command is being run.
+function TestRunOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    // Get the selected project name.
+    if (gCurrentProject == null) 
+    {
+        confirm("!Please select a project before running!");
+        return true;
+    }
+    TraderHistoryDoClear();
+    messageBar("<font color=red>...Test Running, Please Wait...</font>");
+    ProjectNameListClear();
+    window.location.hash = "topage";
+    gEventBlockCount++;
+    setTimeout("TestRunOnClick2()",0); // allow refresh of page
+}
+
+function TestRunOnClick2() {
+    // Start the test run of the current trader project.
+    var result = Evals("(fundBacktestMgr.traderManager.testRun {" + gCurrentProject + "})");
+    if (NoError(result)) // If succesful
+    {	
+        ProjectNameListDoSelect(gCurrentProject); // Force page refresh from project selection level down
+    }
+    gEventBlockCount--;
+    messageBar("");
+    return true;
+} 
+
+// ------------------------------------------------------------------
+// ResetBackAYear Button event handler
+function ResetBackAYearOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    if (gCurrentProject == null) 
+    {
+        confirm("!Please select a project before resetting!");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Reseting Back one year, Please Wait...</font>");
+    window.location.hash = "topage";
+    TraderNameListDoClear(); // Clear any currently shown traders for current project
+    TraderHistoryDoClear();
+    setTimeout("ResetBackAYearOnClick2()",0); // Allow page to refresh
+    return true;
+}
+
+function ResetBackAYearOnClick2() {
+    // Start the reset of the current trader project.
+    var result = Evals("(fundBacktestMgr.traderManager.resetBackAYear {" + gCurrentProject + "})");
+    if (NoError(result)) // if Successful
+    {	
+        ProjectNameListDoSelect(gCurrentProject); // Force page refresh from project selection level down
+    }
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//--------------------------------------------------------------------
+// ClearScores Button event handler
+function ClearScoresOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true; 
+    }
+    if (gCurrentProject == null) 
+    {
+        confirm("!Please select a project before clearing!");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Clearing Scores, Please Wait...</font>");
+    window.location.hash = "topage";
+    TraderHistoryDoClear();
+    TraderNameListDoClear(); // Clear any currently shown traders for current project
+    setTimeout("ClearScoresOnClick2()",0); // allow page to refresh
+    return true;
+}
+
+function ClearScoresOnClick2() { // Secondhalf of event handler
+    // Clear the scores of the current trader project.
+    var result = Evals("(fundBacktestMgr.traderManager.clearProjectScores)");
+    if (NoError(result)) // if Successful
+    {	
+        ProjectNameListDoSelect(gCurrentProject); // Force page reset from project selection level down
+    }
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//---------------------------------------------------------------------
+// Picks Button event handler
+function PicksOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    // Get the selected trader name
+    if (gCurrentTrader == null) 
+    {
+        window.open("NoAnswerDetails.htm");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Getting Picks, Please Wait...</font>");
+    window.location.hash = "topage";
+    // Start the picks selection of the selected trader Lambda.
+    EvalAsync("(fundBacktestMgr.traderReportHTMLPage #void {" + gCurrentTrader + "} {weekly_tdr_show_me.htm} {0%})", PicksOnClick2);
+    return true;
+}
+
+function PicksOnClick2() {
+    // Complete the picks selection of the selected trader Lambda.
+    if (gReq.readyState != 4 ) return true;
+    var result = processEvalXMLASync();
+    if (NoError(result)) // If Successful
+    {	// Display the requested report
+        window.open("weekly_tdr_show_me.htm");
+    }
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//-----------------------------------------------------------------------
+// UpdateTables Button event handlers
+function UpdateTablesOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true; 
+    }
+    if (gCurrentTrader == null) 
+    {
+        confirm("!Please select a trader before updating tables!");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Please Wait...</font>");
+    setTimeout("UpdateTablesOnClick2()",0); // allow page to refresh
+    return true;
+}
+	
+function UpdateTablesOnClick2() { // second half of event handler	
+    // Show the new score source into the current project.
+    result = Evals("(fundBacktestMgr.traderManager.updateProjectTables)");
+    if (!NoError(result)) 
+    {	// Error processing code if any
+    }
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//---------------------------------------------------------------------
+// Export Project Button event handler
+function ExportProjectOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true; 
+    }
+    if (gCurrentProject == null) 
+    {
+        confirm("!Please select a project before exporting!");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Exporting Project, Please Wait...</font>");
+    window.location.hash = "topage";
+    TraderHistoryDoClear();
+    TraderNameListDoClear(); 				// Clear any currently shown traders for current project
+    // Start exporting the current trader project.
+    EvalAsync("(fundBacktestMgr.exportTraderProject {" + gCurrentProject + "} {" + gCurrentProject + "})", ExportProjectOnClick2);
+    return true;
+}
+
+function ExportProjectOnClick2() { // second half of event handler
+    // Complete the exporting of the current trader project.
+    if (gReq.readyState != 4 ) return true;
+    var result = processEvalXMLASync();
+    NoError(result);
+    ProjectNameListDoSelect(gCurrentProject);
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//---------------------------------------------------------------------
+// TestTrader Button event handler
+function TestTraderOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true; 
+    }
+    if (gCurrentProject == null) 
+    {
+        confirm("!Please select a project before running!");
+        return true;
+    }
+    if (gCurrentTrader == null) 
+    {
+        confirm("!Please select a trader before running!");
+        return true;
+    }
+    gEventBlockCount++;
+    messageBar("<font color=red>...Test Running, Please Wait...</font>");
+    window.location.hash = "topage";
+    TraderHistoryDoClear();
+    TraderNameListDoClear();    // Clear any currently shown traders for current project
+    // Start the test run of the current trader project.
+    EvalAsync("(fundBacktestMgr.traderManager.testRun {" + gCurrentProject + "} {" + gCurrentTrader + "})", TestTraderOnClick2);
+    return true;
+}
+
+function TestTraderOnClick2() { // second half of event handler
+    // Complete the test run of the current trader project.
+    if (gReq.readyState != 4 ) return true;
+    var result = processEvalXMLASync();
+    NoError(result);
+    ProjectNameListDoSelect(gCurrentProject);
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//---------------------------------------------------------------------
+// TraderHistory text area support functions
+function TraderHistoryDoClear() {
+    var element = document.getElementById("TraderHistory");
+    var win = (document.contentWindow == "undefined") ? element : element.contentWindow;
+    win.location.href = "NoAnswerDetails.htm";
+    return true;
+}
+
+function TraderHistoryDoInit() {
+    var command = "", elem, result, reportSW;
+    var element, win;
+    // Get report type
+    elem = document.getElementById("ReportMenu");
+    report = elem.options[elem.selectedIndex].text;
+    // Get report smoothing option
+    reportSW = gTablesMenuOptionChoice;
+    // Load the record details into the detail record viewer.
+    if (report == "Test Strategy") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Test Strategy|:))";
+    else if (report == "AnnualTrading") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Annual Trading|:))";
+    else if (report == "SeasonalTrading") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Seasonal Trading|:))";
+    else if (report == "MonthlyTrading") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Monthly Trading|:))";
+    else if (report == "QuarterlyTrading") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Quarterly Trading|:))";
+    else if (report == "WeeklyTrading(by month)") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Weekly Trading (by month)|:))";
+    else if (report == "AnnualWinPayouts") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Annual WinPayouts|:))";
+    else if (report == "MonthlyWinPayouts") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Monthly WinPayouts|:))";
+    else if (report == "AnnualLossPayouts") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Annual LossPayouts|:))";
+    else if (report == "MonthlyLossPayouts") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheetJanStrategies #void {" + gCurrentTrader + "} |Monthly LossPayouts|:))";
+    else if (report == "WorkSheet") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheet #void {" + gCurrentTrader + "} all: profits:))";
+    else if (report == "WorkSheet(Details)") command = "(deepGreen.recordDetails (fundBacktestMgr.traderReportWorkSheet #void {" + gCurrentTrader + "} all: details:))";
+    else if (report == "Stats") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterScores {" + gCurrentTrader + "}))";
+    else if (report == "Hist") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterHistory {" + gCurrentTrader + "}))";
+    else if (report == "Stocks") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterStocks {" + gCurrentTrader + "}))";
+    else if (report == "Holdings") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterHoldings {" + gCurrentTrader + "}))";
+    else if (report == "Tables") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterTables {" + gCurrentTrader + "}))";
+    else if (report == "Testing") command = "(deepGreen.recordDetails (fundBacktestMgr.traderManager.getFilterTesting {" + gCurrentTrader + "}))";
+    else // report == "None" or anything else not in the list above 
+    {	
+        return true;
+    }
+    result = Evals(command);
+    if (!NoError(result)) // on failure
+    {	
+        return true;
+    }
+    // Display the requested report in a local pane.
+    element = document.getElementById("TraderHistory");
+    win = (document.contentWindow == "undefined") ? element : element.contentWindow;
+    win.location.href = result;
+    return true;
+} 
+
+//---------------------------------------------------------------------
+// TraderSource event handlers and state.
+function TraderSourceDoClear() {
+    var txtobj;
+    document.getElementById("TraderName").value = "";
+    document.getElementById("TraderSource").vlaue = "";
+    return true;
+}
+
+//---------------------------------------------------------------------
+// Save Button event handlers
+function SaveOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    gCurrentTrader = document.getElementById("TraderName").value;	
+    if (gCurrentTrader == null) 
+    {
+        confirm("!Please enter a trader name before Saving!");
+        return true;
+    }
+    gEventBlockCount++;
+    TraderHistoryDoClear();
+    messageBar("<font color=red>...Saving Trader Source, Please Wait...</font>");
+    setTimeout("SaveOnClick2()",0); // allow page to refresh
+    return true;
+}
+
+function SaveOnClick2() { // second half of event handler
+    var command;
+    // Get the selected project name.
+    var elem = document.getElementById("TablesMenu");
+    var optionChoice = elem.options[elem.selectedIndex].text;
+    // Set the tables option of the current trader project.
+    var result = Evals("(setq fundBacktestMgr.tablesOption (trim {" + optionChoice + "}))");
+    if (!NoError(result)) 
+    {	
+        gEventBlockCount--;
+        messageBar("");
+        return true;
+    }
+    // Save the new trader source into the current trader project.
+    gCurrentTrader = document.getElementById("TraderName").value;
+    var source = document.getElementById("TraderSource").value;
+    command = "setq ________checkInTemp {" + source
+    result = Evals(command);
+    command = "(fundBacktestMgr.traderManager.addProjectFilter {" + gCurrentTrader + "} ________checkInTemp)";
+    result = Evals(command);
+    Evals("(setq ________checkInTemp #void)");
+    if (!NoError(result)) 
+    {	
+        gEventBlockCount--;
+        messageBar("");
+        return true; 
+    }
+    //TM! need to use getElementByID here
+    TraderNameListDoInit();
+    window.location.hash = "topage";
+    TraderNameListDoSelect();
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//------------------------------------------------------------------------
+// copy button event handlers
+function CopyOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")        
+        return true; 
+    }
+    // Get the selected trader names.
+    if (gCurrentTrader == null) 
+    {
+        confirm("!Please select a trader before Copying!");
+        return true;
+    }
+    // Need to use getElementById here	
+    var newName = document.getElementById("TraderName").value;
+    if (newName == "" || newName == null) 
+    {
+        confirm("!Please enter a new trader name before Copying!");
+        return true;
+    }
+    gEventBlockCount++;
+    TraderHistoryDoClear();
+    messageBar("<font color=red>...Copying Trader, Please Wait...</font>");
+    setTimeout("CopyOnClick2('" + newName + "')",0);
+    return true;
+}
+	
+function CopyOnClick2(newName) {
+    // Save the new trader record into the current trader project.
+    var result = Evals("(fundBacktestMgr.traderManager.copyFilterLambda {" + gCurrentTrader + "} {" + newName + "})");
+    if (!NoError(result)) 
+    {	
+        gEventBlockCount--;
+        messasgeBar("");
+        return true;
+    }
+    if (newName != gCurrentTrader) 
+    {
+        TraderNameListDoInit();
+        window.location.hash = "topage";
+    }
+    else 
+    {
+        TraderNameListDoSelect();
+    }
+    messageBar("");
+    gEventBlockCount--;
+    return true;
+} 
+
+//--------------------------------------------------------
+// delete button event handlers
+function DeleteOnClick() {
+    if (gEventBlockCount > 0) 
+    {
+        alert("Script Running. Please wait.")
+        return true;
+    }
+    if (gCurrentTrader == null) 
+    {
+        confirm("!Please enter a trader name before Deleting!");
+        return true;
+    }
+    gEventBlockCount++;
+    // Let the user know that DeepGreen is thinking.
+    TraderHistoryDoClear();
+    messageBar("<font color=red>...Deleting trader source, Please Wait...</font>");
+    setTimeout("DeleteOnClick2()",0); // allow page to refresh
+    return true;
+}
+	
+function DeleteOnClick2() {	// second half of event handler
+    // Save the new trader source into the current trader project.
+    var source = document.getElementById("TraderSource").value;
+    result = Evals("(fundBacktestMgr.traderManager.dropProjectFilter {" + gCurrentTrader + "})");
+    if (NoError(result)) // on success 
+    {	
+        TraderNameListDoInit();
+        window.location.hash = "topage";
+    }
+    messageBar("");
+    gEventBlockCount--;	
+    return true;
+} 
+
+function TraderSourceDoInit() {
+    // Get the selected trader name.
+    var txtobj;
+    txtobj = document.getElementById("TraderName");
+    txtobj.value = gCurrentTrader;
+    // Load the record details into the detail record viewer.
+    result = Evals("(fundBacktestMgr.traderManager.getFilterSource {" + gCurrentTrader + "})");
+    if (NoError(result)) // On Success
+    { 	
+        result = decodeXml(result);
+        txtobj = document.getElementById("TraderSource");
+        txtobj.value = result;
+    }
+    return true;
+}
+
+function AdjustLayout() {
+    // Resize various elements to fit inside 
+    // available space.
+    var w = screen.availWidth - 230; // approximates window chrome and deepgreen menu "very roughly!"
+    document.getElementById("TraderHistory").style.width = w - document.getElementById("ProjectNameList").width; 
+}
+
+// Startup script. This script is called when the pages is finished loading.
+function startup() {
+    AdjustLayout();
+    gEventBlockCount++;
+    //TraderSourceForm.TraderSource.rows = (screen.height/25);
+    ProjectNameListDoInit();
+    gResult = Evals("(setq fundBacktestMgr.tablesOption {Yrly})");
+    gEventBlockCount--;
+}
+
+window.onload = startup;
+		
+</script>
+
+</head>
+
+<body LEFTMARGIN="0" TOPMARGIN="0" BACKGROUND="granite.gif" TEXT="#000000" LINK="#0000ff">
+<A NAME="topage"></A>
+
+<FONT COLOR="#000080"><H3 ID="MessageBar" ALIGN="center">DeepGreen Weekly Fund Viewer</H3></FONT>
+<TABLE>
+	<TR>
+		<TD>
+		<SELECT ID="SortNameMenu" onChange='SortNameMenuOnChange();'><OPTION SELECTED>Avg<OPTION>Name<OPTION>Min<OPTION>Max<OPTION>SafeReturn<OPTION>Drawdown12Mo<OPTION>AvgTrade<OPTION>AvgTradeAnnualized<OPTION>AvgHoldWeeks<OPTION>WinPct<OPTION>AvgWin<OPTION>LossPct<OPTION>AvgLoss<OPTION>Stdev<OPTION>AllCashPct<OPTION>None</SELECT>
+		<SELECT ID="ReportMenu" onChange='ReportMenuOnChange();'><OPTION SELECTED>Stats<OPTION>Stocks<OPTION>Holdings<OPTION>Hist<OPTION>Tables<OPTION>Testing<OPTION>WorkSheet<OPTION>WorkSheet(Details)<OPTION>AnnualTrading<OPTION>SeasonalTrading<OPTION>QuarterlyTrading<OPTION>MonthlyTrading<OPTION>WeeklyTrading(by month)<OPTION>AnnualWinPayouts<OPTION>MonthlyWinPayouts<OPTION>AnnualLossPayouts<OPTION>MonthlyLossPayouts<OPTION>Test Strategy<OPTION>None</SELECT>
+		</TD>
+		<TD><SELECT ID="TablesMenu" onChange='TablesMenuOnChange();'><OPTION SELECTED>Yrly<OPTION>Qtrly<OPTION>Mnthly<OPTION>Wkly<OPTION>None</SELECT></TD>
+		<TD><INPUT ID="ViewSource" TYPE='button' VALUE='View Source' onClick='window.location.hash="ViewSource";'></TD>
+		<TD><INPUT ID="Export Project" TYPE='button' VALUE='Export Project' onClick='ExportProjectOnClick();'></TD>
+		<TD><INPUT ID="ResetBackOneYear" TYPE='button' VALUE='Reset Back A Year' onClick='ResetBackAYearOnClick();'></TD>
+		<TD><INPUT ID="ClearScores" TYPE='button' VALUE='Clear Scores' onClick='ClearScoresOnClick();'></TD>
+		<TD><INPUT ID="Picks" TYPE='button' VALUE='Show Me' onClick='PicksOnClick();'></TD>
+		<TD><INPUT ID="UpdateTables" TYPE='button' VALUE='Update Tables' onClick='UpdateTablesOnClick();'></TD>
+		<TD><INPUT ID="TestTrader" TYPE='button' VALUE='Test Trader' onClick='TestTraderOnClick();'></TD>
+	</TR>
+</TABLE>
+<HR>
+<TABLE>
+	<TR>
+		<TD>
+			<TABLE>
+				<TR>
+					<TD><iframe ID="ProjectNameList" height="$$$ProjectNameListHeight$$$" width="$$$ProjectNameListWidth$$$"></iframe></TD>
+				</TR>
+				<TR>
+					<TD><iframe ID="TraderNameList" height="$$$TraderNameListHeight$$$" width="$$$TraderNameListWidth$$$"></iframe></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		<TD><IFRAME ID="TraderHistory" HEIGHT="$$$TraderHistoryHeight$$$"  width="$$$TraderHistoryWidth$$$" SRC="NoAnswerDetails.htm"></IFRAME></TD>
+	</TR>
+</TABLE>
+<HR>
+<A NAME="Viewsource"></A>
+<TABLE>
+	<TR>
+		<TD><INPUT ID="GoToTop" TYPE='button' VALUE='Go To Top' onClick='window.location.hash = "topage";'></TD>
+		<TD><INPUT ID="HotPicks" TYPE='button' VALUE='Show Me' onClick='PicksOnClick();'></TD>
+		<TD><INPUT ID="Save" TYPE='button' VALUE='Save' onClick='SaveOnClick();'></TD>
+		<TD><INPUT ID="Copy" TYPE='button' VALUE='Copy' onClick='CopyOnClick();'></TD>
+		<TD><TEXTAREA ID="TraderName" ALIGN="left" ROWS="1" COLS="88"></TEXTAREA></TD>
+		<TD><INPUT ID="Delete" TYPE='button' VALUE='Delete' onClick='DeleteOnClick();'></TD>
+	</TR>
+</TABLE>
+<TEXTAREA ID="TraderSource" ROWS="$$$TraderSourceRows$$$" COLS="$$$TraderSourceCols$$$"></TEXTAREA>
+</body>
+</html>
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

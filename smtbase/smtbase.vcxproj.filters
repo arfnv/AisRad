@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6caf086f-2945-4705-ac73-524330e5695f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{dccb62b2-f47d-4592-9261-0f7c53e026c2}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{328f9d26-9fd9-4f4b-a579-2635b6cfc07b}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="areadme.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fcompile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fconio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fcontrol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fconvert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fdatabas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fdatefnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fdebug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fdefine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ffinance.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ffloat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="flisp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="flist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmacro.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmath1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmath2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmath3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmemory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmysql1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fobject.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fopt1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fopt2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="foptimize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fpred.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fpred2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fproc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fpropty.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fsforms1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fsforms2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fsforms3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fsmtbase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fstatfnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fstring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ftextfnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="futil1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="futil2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="futil3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvmcode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvmscpt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvmscpt2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fwkspace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tbitvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tbrick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tbytevec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tcontin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpxvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tdatabas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tdiction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tdirect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="terror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tfltvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tintvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tlambda.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tlongvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tmatrix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tnummat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tnumvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tobject.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tobjvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tpair.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tpcodvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tshortvec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tstring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tstruct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tsymbol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tvector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="twkspace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fcompile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fconio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fcontrol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fconvert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fdatabas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fdatefnc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fdebug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fdefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffinance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ffloat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flisp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmacro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmath1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmath2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmath3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fmysql1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fopt1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fopt2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="foptimize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fperfmon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fpred.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fpred2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fproc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fpropty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fsforms1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fsforms2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fsforms3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fsim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fsmtbase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fstatfnc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ftextfnc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="futil1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="futil2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="futil3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fvmcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fvmscpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fvmscpt2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fwkspace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tbitvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tbrick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tbytevec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tcontin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpxvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tdatabas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tdiction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tdirect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="terror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tfltvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tintvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tlambda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tlongvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tnummat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tnumvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tobjvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tpair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tpcodvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tshortvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tstruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tsymbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tvector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="twkspace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
